@@ -63,40 +63,39 @@ const caseStudies: CaseStudy[] = [
 
 export function CaseStudies() {
   return (
-    <section id="case-studies" className="border-b border-zinc-800">
-      <div className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-12 flex flex-col gap-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-cyan-400">// the production logs</span>
-          <h2 className="text-balance font-mono text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">
+    <section id="case-studies" className="border-b border-zinc-200">
+      <div className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mb-16 flex flex-col gap-3">
+          <span className="text-xs font-medium uppercase tracking-widest text-blue-900">The Production Logs</span>
+          <h2 className="text-balance font-serif text-4xl font-medium tracking-tight text-zinc-900 md:text-5xl">
             Enterprise Case Studies
           </h2>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-2 lg:grid-cols-3">
           {caseStudies.map((cs) => (
             <article
               key={cs.title}
-              className={`group flex flex-col gap-4 rounded-none border border-zinc-800 bg-zinc-950 p-6 transition-colors hover:border-cyan-400/40 hover:bg-zinc-900 ${
+              className={`group flex flex-col gap-4 bg-zinc-50 p-8 transition-colors hover:bg-white ${
                 cs.span ? "lg:col-span-2" : ""
               }`}
             >
               <div className="flex items-center justify-between">
-                <div className="flex size-9 items-center justify-center rounded-none border border-zinc-800 bg-black">
-                  <cs.icon className="size-4 text-cyan-400" />
+                <div className="flex size-10 items-center justify-center border border-blue-900/20 bg-blue-900/5">
+                  <cs.icon className="size-4 text-blue-900" />
                 </div>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-zinc-500">{cs.tag}</span>
+                <span className="text-[11px] uppercase tracking-widest text-zinc-400">{cs.tag}</span>
               </div>
 
-              <h3 className="text-balance font-mono text-lg font-semibold tracking-tight text-zinc-50">{cs.title}</h3>
-              <p className="text-pretty text-sm leading-relaxed text-zinc-400">{cs.context}</p>
+              <h3 className="text-balance font-serif text-xl font-medium tracking-tight text-zinc-900">{cs.title}</h3>
+              <p className="text-pretty text-sm leading-relaxed text-zinc-600">{cs.context}</p>
 
-              <div className="mt-auto flex flex-col gap-1.5 pt-2">
+              <div className="mt-auto flex flex-wrap gap-2 pt-2">
                 {cs.metrics.map((m) => (
                   <span
                     key={m}
-                    className="inline-flex items-center gap-2 rounded-none border-l-2 border-cyan-400 bg-cyan-400/5 px-2.5 py-1 font-mono text-[11px] text-cyan-400"
+                    className="inline-flex items-center border border-blue-900/20 bg-blue-900/5 px-2.5 py-1 text-[11px] font-medium text-blue-900"
                   >
-                    <span className="text-cyan-400/60">{"> "}</span>
                     {m}
                   </span>
                 ))}

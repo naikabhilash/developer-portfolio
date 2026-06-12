@@ -23,26 +23,26 @@ const pillars = [
 
 export function Pillars() {
   return (
-    <section id="pillars" className="border-b border-zinc-800">
-      <div className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-12 flex flex-col gap-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-cyan-400">// the archetype</span>
-          <h2 className="text-balance font-mono text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">
+    <section id="pillars" className="border-b border-zinc-200">
+      <div className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mb-16 flex flex-col gap-3">
+          <span className="text-xs font-medium uppercase tracking-widest text-blue-900">The Archetype</span>
+          <h2 className="text-balance font-serif text-4xl font-medium tracking-tight text-zinc-900 md:text-5xl">
             Core Engineering Pillars
           </h2>
         </div>
 
-        <div className="grid gap-px overflow-hidden rounded-none border border-zinc-800 bg-zinc-800 md:grid-cols-3">
+        <div className="grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 md:grid-cols-3">
           {pillars.map((p) => (
             <div
               key={p.title}
-              className="group flex flex-col gap-4 bg-black p-8 transition-colors hover:bg-zinc-900"
+              className="group flex flex-col gap-4 bg-zinc-50 p-8 transition-colors hover:bg-white"
             >
-              <div className="flex size-10 items-center justify-center rounded-none border border-cyan-400/30 bg-cyan-400/10">
-                <p.icon className="size-5 text-cyan-400" />
+              <div className="flex size-11 items-center justify-center border border-blue-900/20 bg-blue-900/5">
+                <p.icon className="size-5 text-blue-900" />
               </div>
-              <h3 className="font-mono text-lg font-semibold tracking-tight text-zinc-50">{p.title}</h3>
-              <p className="leading-relaxed text-zinc-400">{p.description}</p>
+              <h3 className="font-serif text-xl font-medium tracking-tight text-zinc-900">{p.title}</h3>
+              <p className="leading-relaxed text-zinc-600">{p.description}</p>
             </div>
           ))}
         </div>

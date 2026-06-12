@@ -35,11 +35,11 @@ export function StackMatrix() {
   const current = domains.find((d) => d.key === active)!
 
   return (
-    <section id="stack" className="border-b border-zinc-800">
-      <div className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-12 flex flex-col gap-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-cyan-400">// the semantic layer</span>
-          <h2 className="text-balance font-mono text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">
+    <section id="stack" className="border-b border-zinc-200">
+      <div className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mb-16 flex flex-col gap-3">
+          <span className="text-xs font-medium uppercase tracking-widest text-blue-900">The Semantic Layer</span>
+          <h2 className="text-balance font-serif text-4xl font-medium tracking-tight text-zinc-900 md:text-5xl">
             Tech Stack Matrix
           </h2>
         </div>
@@ -52,10 +52,10 @@ export function StackMatrix() {
                 key={d.key}
                 type="button"
                 onClick={() => setActive(d.key)}
-                className={`inline-flex items-center gap-2 rounded-none border px-4 py-2 font-mono text-sm transition-colors ${
+                className={`inline-flex items-center gap-2 border px-4 py-2 text-sm font-medium transition-colors ${
                   isActive
-                    ? "border-cyan-400/40 bg-cyan-400/10 text-cyan-400"
-                    : "border-zinc-800 text-zinc-400 hover:border-cyan-400/40 hover:text-cyan-400"
+                    ? "border-blue-900 bg-blue-900 text-zinc-50"
+                    : "border-zinc-300 text-zinc-600 hover:border-zinc-900 hover:text-zinc-900"
                 }`}
               >
                 <d.icon className="size-4" />
@@ -65,15 +65,15 @@ export function StackMatrix() {
           })}
         </div>
 
-        <div className="mt-6 rounded-none border border-zinc-800 bg-zinc-950 p-6">
-          <div className="grid gap-px overflow-hidden rounded-none border border-zinc-800 bg-zinc-800 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8">
+          <div className="grid gap-px overflow-hidden border border-zinc-200 bg-zinc-200 sm:grid-cols-2 lg:grid-cols-3">
             {current.items.map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-3 bg-black px-4 py-4 transition-colors hover:bg-zinc-900"
+                className="flex items-center gap-3 bg-zinc-50 px-4 py-4 transition-colors hover:bg-white"
               >
-                <span className="size-1.5 rounded-none bg-cyan-400" />
-                <span className="font-mono text-sm text-zinc-300">{item}</span>
+                <span className="size-1.5 rounded-full bg-blue-900" />
+                <span className="text-sm font-medium text-zinc-700">{item}</span>
               </div>
             ))}
           </div>
