@@ -14,10 +14,10 @@ export function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-zinc-950/80 backdrop-blur-md">
+    <header className="sticky top-0 z-50 w-full border-b border-zinc-800 bg-black/90 backdrop-blur-md">
       <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-6">
         <a href="#top" className="font-mono text-sm font-bold tracking-tight text-zinc-50">
-          AN <span className="text-zinc-600">//</span> <span className="text-emerald-400">ARCHITECT</span>
+          AN <span className="text-zinc-600">//</span> <span className="text-cyan-400">ARCHITECT</span>
         </a>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -25,14 +25,14 @@ export function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="font-mono text-sm text-zinc-400 transition-colors hover:text-zinc-50"
+              className="font-mono text-sm text-zinc-400 transition-colors hover:text-cyan-400"
             >
               {link.label}
             </a>
           ))}
           <a
             href="#contact"
-            className="rounded-lg border border-zinc-700 px-3 py-1.5 font-mono text-sm text-zinc-50 transition-colors hover:border-emerald-500/40 hover:bg-emerald-500/10 hover:text-emerald-400"
+            className="rounded-none border border-zinc-700 px-3 py-1.5 font-mono text-sm text-zinc-50 transition-colors hover:border-cyan-400 hover:bg-cyan-400 hover:text-black"
           >
             Contact
           </a>
@@ -42,7 +42,7 @@ export function Navbar() {
           type="button"
           aria-label="Toggle menu"
           onClick={() => setOpen((v) => !v)}
-          className="text-zinc-400 transition-colors hover:text-zinc-50 md:hidden"
+          className="text-zinc-400 transition-colors hover:text-cyan-400 md:hidden"
         >
           {open ? <X className="size-5" /> : <Menu className="size-5" />}
         </button>
@@ -55,7 +55,7 @@ export function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="rounded-md px-2 py-2 font-mono text-sm text-zinc-400 transition-colors hover:bg-zinc-900 hover:text-zinc-50"
+              className="rounded-none px-2 py-2 font-mono text-sm text-zinc-400 transition-colors hover:bg-zinc-900 hover:text-cyan-400"
             >
               {link.label}
             </a>
@@ -63,7 +63,7 @@ export function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="rounded-md px-2 py-2 font-mono text-sm text-emerald-400"
+            className="rounded-none px-2 py-2 font-mono text-sm text-cyan-400"
           >
             Contact
           </a>

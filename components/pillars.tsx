@@ -26,22 +26,22 @@ export function Pillars() {
     <section id="pillars" className="border-b border-zinc-800">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-12 flex flex-col gap-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-emerald-400">// the archetype</span>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">
+          <span className="font-mono text-xs uppercase tracking-widest text-cyan-400">// the archetype</span>
+          <h2 className="text-balance font-mono text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">
             Core Engineering Pillars
           </h2>
         </div>
 
-        <div className="grid gap-px overflow-hidden rounded-lg border border-zinc-800 bg-zinc-800 md:grid-cols-3">
+        <div className="grid gap-px overflow-hidden rounded-none border border-zinc-800 bg-zinc-800 md:grid-cols-3">
           {pillars.map((p) => (
             <div
               key={p.title}
-              className="group flex flex-col gap-4 bg-zinc-950 p-8 transition-colors hover:bg-zinc-900/60"
+              className="group flex flex-col gap-4 bg-black p-8 transition-colors hover:bg-zinc-900"
             >
-              <div className="flex size-10 items-center justify-center rounded-lg border border-emerald-500/20 bg-emerald-500/10">
-                <p.icon className="size-5 text-emerald-400" />
+              <div className="flex size-10 items-center justify-center rounded-none border border-cyan-400/30 bg-cyan-400/10">
+                <p.icon className="size-5 text-cyan-400" />
               </div>
-              <h3 className="text-lg font-semibold tracking-tight text-zinc-50">{p.title}</h3>
+              <h3 className="font-mono text-lg font-semibold tracking-tight text-zinc-50">{p.title}</h3>
               <p className="leading-relaxed text-zinc-400">{p.description}</p>
             </div>
           ))}

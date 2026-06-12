@@ -14,13 +14,13 @@ const outputs = [
 
 export function NodeGraph() {
   return (
-    <div className="relative rounded-lg border border-zinc-800 bg-zinc-900/40 p-6">
+    <div className="relative rounded-none border border-zinc-800 bg-zinc-950 p-6">
       <div className="mb-4 flex items-center justify-between border-b border-zinc-800 pb-3">
         <span className="font-mono text-xs text-zinc-500">data_flow.diagram</span>
         <div className="flex items-center gap-1.5">
-          <span className="size-2 rounded-full bg-zinc-700" />
-          <span className="size-2 rounded-full bg-zinc-700" />
-          <span className="size-2 rounded-full bg-emerald-500/60" />
+          <span className="size-2 rounded-none bg-zinc-700" />
+          <span className="size-2 rounded-none bg-zinc-700" />
+          <span className="size-2 rounded-none bg-cyan-400/60" />
         </div>
       </div>
 
@@ -30,7 +30,7 @@ export function NodeGraph() {
           {sources.map((s) => (
             <div
               key={s.label}
-              className="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-950/60 px-3 py-2"
+              className="flex items-center gap-2 rounded-none border border-zinc-800 bg-black px-3 py-2"
             >
               <s.icon className="size-4 text-zinc-400" />
               <span className="font-mono text-xs text-zinc-400">{s.label}</span>
@@ -45,7 +45,7 @@ export function NodeGraph() {
               <path d="M0 13 H20 V40" stroke="currentColor" strokeWidth="1" />
               <path d="M0 40 H40" stroke="currentColor" strokeWidth="1" />
               <path d="M0 67 H20 V40" stroke="currentColor" strokeWidth="1" />
-              <circle cx="40" cy="40" r="2.5" className="fill-emerald-400" />
+              <circle cx="40" cy="40" r="2.5" className="fill-cyan-400" />
             </svg>
           </div>
         </div>
@@ -55,7 +55,7 @@ export function NodeGraph() {
           {outputs.map((o) => (
             <div
               key={o.label}
-              className="flex items-center gap-2 rounded-lg border border-zinc-800 bg-zinc-950/60 px-3 py-2"
+              className="flex items-center gap-2 rounded-none border border-zinc-800 bg-black px-3 py-2"
             >
               <o.icon className="size-4 text-zinc-400" />
               <span className="font-mono text-xs text-zinc-400">{o.label}</span>
@@ -65,12 +65,12 @@ export function NodeGraph() {
       </div>
 
       <div className="mt-5 flex items-center justify-center">
-        <div className="inline-flex items-center gap-2 rounded-lg border border-emerald-500/30 bg-emerald-500/10 px-4 py-2.5">
+        <div className="inline-flex items-center gap-2 rounded-none border border-cyan-400/30 bg-cyan-400/10 px-4 py-2.5">
           <span className="relative flex size-2">
-            <span className="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-75" />
-            <span className="relative inline-flex size-2 rounded-full bg-emerald-400" />
+            <span className="absolute inline-flex size-full animate-ping rounded-none bg-cyan-400 opacity-75" />
+            <span className="relative inline-flex size-2 rounded-none bg-cyan-400" />
           </span>
-          <span className="font-mono text-sm font-semibold tracking-tight text-emerald-400">OneLake Core</span>
+          <span className="font-mono text-sm font-semibold tracking-tight text-cyan-400">OneLake Core</span>
         </div>
       </div>
 

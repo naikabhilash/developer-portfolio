@@ -66,8 +66,8 @@ export function CaseStudies() {
     <section id="case-studies" className="border-b border-zinc-800">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-12 flex flex-col gap-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-emerald-400">// the production logs</span>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">
+          <span className="font-mono text-xs uppercase tracking-widest text-cyan-400">// the production logs</span>
+          <h2 className="text-balance font-mono text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">
             Enterprise Case Studies
           </h2>
         </div>
@@ -76,26 +76,27 @@ export function CaseStudies() {
           {caseStudies.map((cs) => (
             <article
               key={cs.title}
-              className={`group flex flex-col gap-4 rounded-lg border border-zinc-800 bg-zinc-900/40 p-6 transition-colors hover:border-zinc-700 ${
+              className={`group flex flex-col gap-4 rounded-none border border-zinc-800 bg-zinc-950 p-6 transition-colors hover:border-cyan-400/40 hover:bg-zinc-900 ${
                 cs.span ? "lg:col-span-2" : ""
               }`}
             >
               <div className="flex items-center justify-between">
-                <div className="flex size-9 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-950">
-                  <cs.icon className="size-4 text-emerald-400" />
+                <div className="flex size-9 items-center justify-center rounded-none border border-zinc-800 bg-black">
+                  <cs.icon className="size-4 text-cyan-400" />
                 </div>
                 <span className="font-mono text-[11px] uppercase tracking-wider text-zinc-500">{cs.tag}</span>
               </div>
 
-              <h3 className="text-balance text-lg font-semibold tracking-tight text-zinc-50">{cs.title}</h3>
+              <h3 className="text-balance font-mono text-lg font-semibold tracking-tight text-zinc-50">{cs.title}</h3>
               <p className="text-pretty text-sm leading-relaxed text-zinc-400">{cs.context}</p>
 
-              <div className="mt-auto flex flex-wrap gap-2 pt-2">
+              <div className="mt-auto flex flex-col gap-1.5 pt-2">
                 {cs.metrics.map((m) => (
                   <span
                     key={m}
-                    className="rounded-md border border-emerald-500/20 bg-emerald-500/10 px-2.5 py-1 font-mono text-[11px] text-emerald-400"
+                    className="inline-flex items-center gap-2 rounded-none border-l-2 border-cyan-400 bg-cyan-400/5 px-2.5 py-1 font-mono text-[11px] text-cyan-400"
                   >
+                    <span className="text-cyan-400/60">{"> "}</span>
                     {m}
                   </span>
                 ))}

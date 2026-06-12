@@ -38,8 +38,10 @@ export function StackMatrix() {
     <section id="stack" className="border-b border-zinc-800">
       <div className="mx-auto max-w-7xl px-6 py-20">
         <div className="mb-12 flex flex-col gap-3">
-          <span className="font-mono text-xs uppercase tracking-widest text-emerald-400">// the semantic layer</span>
-          <h2 className="text-balance text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">Tech Stack Matrix</h2>
+          <span className="font-mono text-xs uppercase tracking-widest text-cyan-400">// the semantic layer</span>
+          <h2 className="text-balance font-mono text-3xl font-bold tracking-tight text-zinc-50 md:text-4xl">
+            Tech Stack Matrix
+          </h2>
         </div>
 
         <div className="flex flex-wrap gap-2">
@@ -50,10 +52,10 @@ export function StackMatrix() {
                 key={d.key}
                 type="button"
                 onClick={() => setActive(d.key)}
-                className={`inline-flex items-center gap-2 rounded-lg border px-4 py-2 font-mono text-sm transition-colors ${
+                className={`inline-flex items-center gap-2 rounded-none border px-4 py-2 font-mono text-sm transition-colors ${
                   isActive
-                    ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400"
-                    : "border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-50"
+                    ? "border-cyan-400/40 bg-cyan-400/10 text-cyan-400"
+                    : "border-zinc-800 text-zinc-400 hover:border-cyan-400/40 hover:text-cyan-400"
                 }`}
               >
                 <d.icon className="size-4" />
@@ -63,14 +65,14 @@ export function StackMatrix() {
           })}
         </div>
 
-        <div className="mt-6 rounded-lg border border-zinc-800 bg-zinc-900/40 p-6">
-          <div className="grid gap-px overflow-hidden rounded-lg border border-zinc-800 bg-zinc-800 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-6 rounded-none border border-zinc-800 bg-zinc-950 p-6">
+          <div className="grid gap-px overflow-hidden rounded-none border border-zinc-800 bg-zinc-800 sm:grid-cols-2 lg:grid-cols-3">
             {current.items.map((item) => (
               <div
                 key={item}
-                className="flex items-center gap-3 bg-zinc-950 px-4 py-4 transition-colors hover:bg-zinc-900/60"
+                className="flex items-center gap-3 bg-black px-4 py-4 transition-colors hover:bg-zinc-900"
               >
-                <span className="size-1.5 rounded-full bg-emerald-400" />
+                <span className="size-1.5 rounded-none bg-cyan-400" />
                 <span className="font-mono text-sm text-zinc-300">{item}</span>
               </div>
             ))}
