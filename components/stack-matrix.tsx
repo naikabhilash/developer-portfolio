@@ -66,7 +66,7 @@ export function StackMatrix() {
 
   const [active, setActive] = useState(domains[0].key)
 
-  const current = domains.find((d) => d.key === active)!
+  const current = domains.find((d) => d.key === active) ?? domains[0]
 
 
 
