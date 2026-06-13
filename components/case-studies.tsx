@@ -1,9 +1,4 @@
 import { Cpu, FlaskConical, Cloud, Activity, Brain, ShieldCheck } from "lucide-react"
-import { Section } from "@/components/ui/section"
-import { SectionHeader } from "@/components/ui/section-header"
-import { CardGrid } from "@/components/ui/card-grid"
-import { IconBox } from "@/components/ui/icon-box"
-import { Badge } from "@/components/ui/badge"
 
 type CaseStudy = {
   icon: typeof Cpu
@@ -68,33 +63,47 @@ const caseStudies: CaseStudy[] = [
 
 export function CaseStudies() {
   return (
-    <Section id="case-studies">
-      <SectionHeader eyebrow="The Production Logs" title="Enterprise Case Studies" />
+    <section id="case-studies" className="border-b border-zinc-800">
+      <div className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mb-16 flex flex-col gap-3">
+          <span className="text-xs font-medium uppercase tracking-widest text-emerald-400">The Production Logs</span>
+          <h2 className="text-balance text-4xl font-semibold tracking-tight text-zinc-100 md:text-5xl">
+            Enterprise Case Studies
+          </h2>
+        </div>
 
-      <CardGrid className="md:grid-cols-2 lg:grid-cols-3">
-        {caseStudies.map((cs) => (
-          <article
-            key={cs.title}
-            className={`group flex flex-col gap-4 bg-zinc-50 p-8 transition-colors hover:bg-white ${
-              cs.span ? "lg:col-span-2" : ""
-            }`}
-          >
-            <div className="flex items-center justify-between">
-              <IconBox icon={cs.icon} />
-              <span className="text-[11px] uppercase tracking-widest text-zinc-400">{cs.tag}</span>
-            </div>
+        <div className="grid gap-px overflow-hidden border border-zinc-800 bg-zinc-800 md:grid-cols-2 lg:grid-cols-3">
+          {caseStudies.map((cs) => (
+            <article
+              key={cs.title}
+              className={`group flex flex-col gap-4 bg-zinc-900/50 p-8 transition-colors hover:bg-zinc-900 ${
+                cs.span ? "lg:col-span-2" : ""
+              }`}
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex size-10 items-center justify-center rounded-lg border border-zinc-700 bg-zinc-950">
+                  <cs.icon className="size-4 text-emerald-400" />
+                </div>
+                <span className="text-[11px] uppercase tracking-widest text-zinc-500">{cs.tag}</span>
+              </div>
 
-            <h3 className="text-balance font-serif text-xl font-medium tracking-tight text-zinc-900">{cs.title}</h3>
-            <p className="text-pretty text-sm leading-relaxed text-zinc-600">{cs.context}</p>
+              <h3 className="text-balance text-xl font-semibold tracking-tight text-zinc-100">{cs.title}</h3>
+              <p className="text-pretty text-sm leading-relaxed text-zinc-400">{cs.context}</p>
 
-            <div className="mt-auto flex flex-wrap gap-2 pt-2">
-              {cs.metrics.map((m) => (
-                <Badge key={m}>{m}</Badge>
-              ))}
-            </div>
-          </article>
-        ))}
-      </CardGrid>
-    </Section>
+              <div className="mt-auto flex flex-wrap gap-2 pt-2">
+                {cs.metrics.map((m) => (
+                  <span
+                    key={m}
+                    className="inline-flex items-center rounded-md border border-zinc-700 bg-zinc-950 px-2.5 py-1 text-[11px] font-medium text-emerald-400"
+                  >
+                    {m}
+                  </span>
+                ))}
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }

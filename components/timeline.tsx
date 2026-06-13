@@ -1,6 +1,3 @@
-import { Section } from "@/components/ui/section"
-import { SectionHeader } from "@/components/ui/section-header"
-
 const roles = [
   {
     company: "UsefulBI Corporation",
@@ -28,28 +25,35 @@ const roles = [
 
 export function Timeline() {
   return (
-    <Section id="timeline">
-      <SectionHeader eyebrow="The Commit History" title="Experience Timeline" />
+    <section id="timeline" className="border-b border-zinc-800">
+      <div className="mx-auto max-w-6xl px-6 py-24">
+        <div className="mb-16 flex flex-col gap-3">
+          <span className="text-xs font-medium uppercase tracking-widest text-emerald-400">The Commit History</span>
+          <h2 className="text-balance text-4xl font-semibold tracking-tight text-zinc-100 md:text-5xl">
+            Experience Timeline
+          </h2>
+        </div>
 
-      <ol className="relative ml-3 border-l border-zinc-200">
-        {roles.map((role) => (
-          <li key={role.company} className="relative pb-12 pl-10 last:pb-0">
-            <span
-              className={`absolute -left-[6.5px] top-1.5 size-3 rounded-full border-2 border-zinc-50 ${
-                role.active ? "bg-blue-900" : "bg-zinc-300"
-              }`}
-            />
-            <div className="flex flex-col gap-2 border border-zinc-200 bg-white p-7 transition-colors hover:border-zinc-300">
-              <div className="flex flex-wrap items-center justify-between gap-2">
-                <h3 className="font-serif text-xl font-medium tracking-tight text-zinc-900">{role.company}</h3>
-                <span className="text-xs uppercase tracking-wider text-zinc-400">{role.period}</span>
+        <ol className="relative ml-3 border-l border-zinc-800">
+          {roles.map((role) => (
+            <li key={role.company} className="relative pb-12 pl-10 last:pb-0">
+              <span
+                className={`absolute -left-[6.5px] top-1.5 size-3 rounded-full border-2 border-zinc-950 ${
+                  role.active ? "bg-emerald-400" : "bg-zinc-600"
+                }`}
+              />
+              <div className="flex flex-col gap-2 rounded-xl border border-zinc-800 bg-zinc-900/50 p-7 transition-colors hover:bg-zinc-900 hover:border-zinc-700">
+                <div className="flex flex-wrap items-center justify-between gap-2">
+                  <h3 className="text-xl font-semibold tracking-tight text-zinc-100">{role.company}</h3>
+                  <span className="text-xs uppercase tracking-wider text-zinc-500">{role.period}</span>
+                </div>
+                <p className="text-sm font-medium text-emerald-400">{role.title}</p>
+                <p className="text-pretty leading-relaxed text-zinc-400">{role.description}</p>
               </div>
-              <p className="text-sm font-medium text-blue-900">{role.title}</p>
-              <p className="text-pretty leading-relaxed text-zinc-600">{role.description}</p>
-            </div>
-          </li>
-        ))}
-      </ol>
-    </Section>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
   )
 }

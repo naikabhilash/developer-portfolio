@@ -16,34 +16,34 @@ function LinkedinIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-zinc-50">
+    <footer id="contact" className="bg-zinc-950">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col gap-6">
-            <span className="text-xs font-medium uppercase tracking-widest text-blue-900">The Callback Function</span>
-            <h2 className="text-balance font-serif text-4xl font-medium tracking-tight text-zinc-900 md:text-5xl">
+            <span className="text-xs font-medium uppercase tracking-widest text-emerald-400">The Callback Function</span>
+            <h2 className="text-balance text-4xl font-semibold tracking-tight text-zinc-100 md:text-5xl">
               Let&apos;s build something scalable together.
             </h2>
 
-            <pre className="overflow-x-auto border border-zinc-200 bg-white p-6 font-mono text-sm leading-relaxed">
+            <pre className="overflow-x-auto rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 font-mono text-sm leading-relaxed">
               <code>
-                <span className="text-zinc-400">const</span> <span className="text-blue-900">contact</span>{" "}
-                <span className="text-zinc-400">=</span> <span className="text-zinc-700">{"{"}</span>
+                <span className="text-zinc-500">const</span> <span className="text-emerald-400">contact</span>{" "}
+                <span className="text-zinc-400">=</span> <span className="text-zinc-300">{"{"}</span>
                 {"\n"}
                 {"  "}
-                <span className="text-zinc-500">email</span>
-                <span className="text-zinc-400">:</span>{" "}
-                <span className="text-blue-900">&quot;abhilash29naik@gmail.com&quot;</span>
+                <span className="text-zinc-400">email</span>
+                <span className="text-zinc-500">:</span>{" "}
+                <span className="text-emerald-400">&quot;abhilash29naik@gmail.com&quot;</span>
                 <span className="text-zinc-400">,</span>
                 {"\n"}
                 {"  "}
-                <span className="text-zinc-500">location</span>
-                <span className="text-zinc-400">:</span>{" "}
-                <span className="text-blue-900">&quot;Bengaluru, India // Remote&quot;</span>
+                <span className="text-zinc-400">location</span>
+                <span className="text-zinc-500">:</span>{" "}
+                <span className="text-emerald-400">&quot;Bengaluru, India // Remote&quot;</span>
                 <span className="text-zinc-400">,</span>
                 {"\n"}
-                <span className="text-zinc-700">{"}"}</span>
-                <span className="text-zinc-400">;</span>
+                <span className="text-zinc-300">{"}"}</span>
+                <span className="text-zinc-500">;</span>
               </code>
             </pre>
           </div>
@@ -51,32 +51,32 @@ export function Footer() {
           <div className="flex flex-col gap-3 lg:items-end">
             <a
               href="mailto:abhilash29naik@gmail.com"
-              className="group inline-flex w-full items-center justify-between gap-3 bg-blue-900 px-5 py-3.5 text-sm font-medium text-zinc-50 transition-colors hover:bg-blue-950 lg:w-auto"
+              className="group inline-flex w-full items-center justify-between gap-3 rounded-lg bg-emerald-500 px-5 py-3.5 text-sm font-medium text-white transition-colors hover:bg-emerald-400 lg:w-auto"
             >
               <span className="flex items-center gap-2">
                 <Mail className="size-4" />
                 Send email
               </span>
-              <span className="text-zinc-50/50 transition-transform group-hover:translate-x-0.5">{"->"}</span>
+              <span className="text-white/50 transition-transform group-hover:translate-x-0.5">{"->"}</span>
             </a>
             <a
               href="https://linkedin.com/in/abhilash-naik"
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex w-full items-center justify-between gap-3 border border-zinc-300 bg-white px-5 py-3.5 text-sm font-medium text-zinc-700 transition-colors hover:border-zinc-900 hover:text-zinc-900 lg:w-auto"
+              className="group inline-flex w-full items-center justify-between gap-3 rounded-lg border border-zinc-700 bg-zinc-900/50 px-5 py-3.5 text-sm font-medium text-zinc-300 transition-colors hover:bg-zinc-900 hover:border-zinc-500 hover:text-zinc-100 lg:w-auto"
             >
               <span className="flex items-center gap-2">
-                <LinkedinIcon className="size-4 text-zinc-400" />
+                <LinkedinIcon className="size-4 text-zinc-500" />
                 linkedin.com/in/abhilash-naik
               </span>
-              <span className="text-zinc-400 transition-transform group-hover:translate-x-0.5">{"->"}</span>
+              <span className="text-zinc-500 transition-transform group-hover:translate-x-0.5">{"->"}</span>
             </a>
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-center justify-between gap-3 border-t border-zinc-200 pt-6 sm:flex-row">
-          <span className="font-serif text-lg font-semibold tracking-tight text-zinc-900">Abhilash Naik</span>
-          <p className="text-xs text-zinc-400">© 2026 Abhilash Naik. Optimized for performance.</p>
+        <div className="mt-20 flex flex-col items-center justify-between gap-3 border-t border-zinc-800 pt-6 sm:flex-row">
+          <span className="text-lg font-semibold tracking-tight text-zinc-100">Abhilash Naik</span>
+          <p className="text-xs text-zinc-500">© 2026 Abhilash Naik. Optimized for performance.</p>
         </div>
       </div>
     </footer>
