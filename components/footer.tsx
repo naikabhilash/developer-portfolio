@@ -1,5 +1,4 @@
 import { Mail } from "lucide-react"
-import { SectionHeader } from "@/components/ui/section-header"
 
 function LinkedinIcon({ className }: { className?: string }) {
   return (
@@ -21,11 +20,10 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col gap-6">
-            <SectionHeader
-              eyebrow="The Callback Function"
-              title="Let's build something scalable together."
-              className="mb-0"
-            />
+            <span className="text-xs font-medium uppercase tracking-widest text-blue-900">The Callback Function</span>
+            <h2 className="text-balance font-serif text-4xl font-medium tracking-tight text-zinc-900 md:text-5xl">
+              Let&apos;s build something scalable together.
+            </h2>
 
             <pre className="overflow-x-auto border border-zinc-200 bg-white p-6 font-mono text-sm leading-relaxed">
               <code>
