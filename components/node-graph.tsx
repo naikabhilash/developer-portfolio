@@ -1,4 +1,5 @@
 import { Database, FileCode2, Cloud, Workflow, BarChart3, Layers } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
 
 const sources = [
   { icon: Database, label: "SQL / EDC" },
@@ -65,10 +66,10 @@ export function NodeGraph() {
       </div>
 
       <div className="mt-6 flex items-center justify-center">
-        <div className="inline-flex items-center gap-2 border border-blue-900/20 bg-blue-900/5 px-4 py-2.5">
+        <Badge className="gap-2 px-4 py-2.5">
           <span className="size-2 rounded-full bg-blue-900" />
           <span className="font-serif text-sm font-semibold tracking-tight text-blue-900">OneLake Core</span>
-        </div>
+        </Badge>
       </div>
 
       <p className="mt-3 text-center text-[11px] uppercase tracking-wider text-zinc-400">
