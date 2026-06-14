@@ -4,6 +4,7 @@ import { Hero } from "@/components/hero"
 import { Pillars } from "@/components/pillars"
 import { StackMatrix } from "@/components/stack-matrix"
 import { CaseStudies } from "@/components/case-studies"
+import { Frameworks } from "@/components/frameworks"
 import { Timeline } from "@/components/timeline"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
@@ -20,6 +21,7 @@ export default function Page() {
         <Pillars />
         <StackMatrix />
         <CaseStudies />
+        <Frameworks />
         <Timeline />
         <ContactForm />
       </main>

@@ -7,6 +7,7 @@ const links = [
   { label: "Architecture", href: "#pillars" },
   { label: "Case Studies", href: "#case-studies" },
   { label: "Stack", href: "#stack" },
+  { label: "Frameworks", href: "#frameworks" },
   { label: "Timeline", href: "#timeline" },
 ]
 
