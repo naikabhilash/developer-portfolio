@@ -17,11 +17,18 @@ export function TechStackBanner() {
   return (
     <div className="bg-zinc-950/50 backdrop-sm">
       <div className="mx-auto max-w-6xl px-6 py-6">
+        <div className="mb-4 flex items-center justify-center gap-3">
+          <span className="size-1.5 rounded-full bg-emerald-400" />
+          <span className="text-xs font-medium uppercase tracking-widest text-emerald-400">
+            Microsoft Certified: Fabric Analytics Engineer Associate
+          </span>
+          <img src="/microsoft-certified-associate-badge.svg" alt="Microsoft Certified Associate Badge" className="size-20" />
+        </div>
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
           {techStack.map((tech, index) => (
             <div
               key={tech.name}
-              className="relative flex size-10 items-center justify-center transition-transform hover:scale-110"
+              className="relative flex size-10 items-center justify-center transition-transform hover:scale-105 duration-300"
               style={{
                 animation: `float 3s ease-in-out infinite`,
                 animationDelay: `${index * 0.2}s`,

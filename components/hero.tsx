@@ -6,11 +6,6 @@ export function Hero() {
     <section id="top" className="bg-zinc-950/50 backdrop-sm">
       <div className="relative mx-auto grid max-w-6xl gap-16 px-6 py-24 md:py-32 lg:grid-cols-2 lg:items-center">
         <div className="flex flex-col items-start gap-7">
-          <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-emerald-400">
-            <span className="size-1.5 rounded-full bg-emerald-400" />
-            Microsoft Certified: Fabric Analytics Engineer Associate
-          </span>
-
           <h1 className="text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-zinc-100 md:text-6xl lg:text-7xl">
             Architecting Enterprise Data Ecosystems.{" "}
             <span className="text-emerald-400">Optimizing Modern Lakehouses.</span>

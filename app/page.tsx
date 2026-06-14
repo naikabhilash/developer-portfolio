@@ -14,9 +14,9 @@ export default function Page() {
     <div className="min-h-screen bg-zinc-950 font-sans text-zinc-100">
       <KnowledgeGraph />
       <Navbar />
-      <TechStackBanner />
       <main>
         <Hero />
+        <TechStackBanner />
         <Pillars />
         <StackMatrix />
         <CaseStudies />
