@@ -18,8 +18,8 @@ export function TechStackBanner() {
     <div className="bg-zinc-950/50 backdrop-sm">
       <div className="mx-auto max-w-6xl px-6 py-6">
         <div className="mb-4 flex items-center justify-center gap-3">
-          <span className="size-1.5 rounded-full bg-emerald-400" />
-          <span className="text-xs font-medium uppercase tracking-widest text-emerald-400">
+          {/* <span className="size-1.5 rounded-full bg-emerald-400" /> */}
+          <span className="text-lg font-medium uppercase tracking-widest text-white-400">
             Microsoft Certified: Fabric Analytics Engineer Associate
           </span>
           <img src="/microsoft-certified-associate-badge.svg" alt="Microsoft Certified Associate Badge" className="size-20" />

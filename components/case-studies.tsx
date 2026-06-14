@@ -35,14 +35,15 @@ const caseStudies: CaseStudy[] = [
       "Led a team converting 500+ legacy AWS Glue jobs to Databricks. Overcame LLM translation variance by breaking pipeline code into structured groups (Library, Transformation, Read/Write) and utilizing targeted prompt tuning.",
     metrics: ["+20% Code Quality Improvement", "Significant Cloud Cost Reduction"],
   },
-  {
-    icon: Activity,
-    tag: "Streaming",
-    title: "Low-Latency Telemetry & Operational Alerting Engine",
-    context:
-      "Implemented streaming pipelines using Fabric ingestion patterns and PySpark streaming to aggregate live log events inside a Delta Lake architecture, feeding an active anomaly-alerting dashboard.",
-    metrics: ["Live Anomaly Detection", "Delta Lake Streaming"],
-  },
+  // DISABLED: Low-Latency Telemetry & Operational Alerting Engine
+  // {
+  //   icon: Activity,
+  //   tag: "Streaming",
+  //   title: "Low-Latency Telemetry & Operational Alerting Engine",
+  //   context:
+  //     "Implemented streaming pipelines using Fabric ingestion patterns and PySpark streaming to aggregate live log events inside a Delta Lake architecture, feeding an active anomaly-alerting dashboard.",
+  //   metrics: ["Live Anomaly Detection", "Delta Lake Streaming"],
+  // },
   {
     icon: Brain,
     tag: "MLOps",

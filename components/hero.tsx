@@ -7,8 +7,8 @@ export function Hero() {
       <div className="relative mx-auto grid max-w-6xl gap-16 px-6 py-24 md:py-32 lg:grid-cols-2 lg:items-center">
         <div className="flex flex-col items-start gap-7">
           <h1 className="text-balance text-5xl font-semibold leading-[1.05] tracking-tight text-zinc-100 md:text-6xl lg:text-7xl">
-            Architecting Enterprise Data Ecosystems.{" "}
-            <span className="text-emerald-400">Optimizing Modern Lakehouses.</span>
+            From ingestion to insights:{" "}
+            <span className="text-emerald-400">end-to-end data architecture that moves the needle.</span>
           </h1>
 
           <p className="max-w-xl text-pretty text-lg leading-relaxed text-zinc-400">

@@ -12,11 +12,11 @@ const domains = [
 
     key: "storage",
 
-    label: "Fabric Storage",
+    label: "Infrastructure & Lakehouse",
 
     icon: HardDrive,
 
-    items: ["OneLake", "Lakehouse", "Warehouse Design", "Delta / Parquet Optimization"],
+    items: ["OneLake", "Delta Lake", "Databricks", "Unity Catalog","AWS S3","Azure Data Lake Gen2"],
 
   },
 
@@ -40,7 +40,7 @@ const domains = [
 
     icon: PieChart,
 
-    items: ["Power BI", "DAX", "Power Query (M)", "Tabular Editor", "DAX Studio"],
+    items: ["Power BI", "Tableau", "R Shiny", "Tabular Editor", "Plotly", "TMDL"],
 
   },
 
