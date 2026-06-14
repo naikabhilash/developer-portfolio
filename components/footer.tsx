@@ -16,7 +16,7 @@ function LinkedinIcon({ className }: { className?: string }) {
 
 export function Footer() {
   return (
-    <footer id="contact" className="bg-zinc-950">
+    <footer id="footer" className="bg-zinc-950">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           <div className="flex flex-col gap-6">
@@ -33,7 +33,7 @@ export function Footer() {
                 {"  "}
                 <span className="text-zinc-400">email</span>
                 <span className="text-zinc-500">:</span>{" "}
-                <span className="text-emerald-400">&quot;abhilash29naik@gmail.com&quot;</span>
+                <span className="text-emerald-400">&quot;naik.abhilash@protonmail.com&quot;</span>
                 <span className="text-zinc-400">,</span>
                 {"\n"}
                 {"  "}

@@ -72,7 +72,7 @@ export function StackMatrix() {
 
   return (
 
-    <section id="stack" className="border-b border-zinc-800">
+    <section id="stack" className="bg-zinc-950/50 backdrop-sm">
 
       <div className="mx-auto max-w-6xl px-6 py-24">
 

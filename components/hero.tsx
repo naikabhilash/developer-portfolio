@@ -3,7 +3,7 @@ import { NodeGraph } from "./node-graph"
 
 export function Hero() {
   return (
-    <section id="top" className="relative border-b border-zinc-800">
+    <section id="top" className="bg-zinc-950/50 backdrop-sm">
       <div className="relative mx-auto grid max-w-6xl gap-16 px-6 py-24 md:py-32 lg:grid-cols-2 lg:items-center">
         <div className="flex flex-col items-start gap-7">
           <span className="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-widest text-emerald-400">
@@ -30,7 +30,7 @@ export function Hero() {
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
             </a>
             <a
-              href="/resume.pdf"
+              href="/Lead Software Engineer - Abhilash Naik.pdf"
               className="inline-flex items-center gap-2 border border-zinc-700 px-5 py-3 text-sm font-medium text-zinc-300 transition-colors hover:border-zinc-500 hover:text-zinc-100"
             >
               <Download className="size-4 text-zinc-500" />

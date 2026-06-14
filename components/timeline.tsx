@@ -25,7 +25,7 @@ const roles = [
 
 export function Timeline() {
   return (
-    <section id="timeline" className="border-b border-zinc-800">
+    <section id="timeline" className="bg-zinc-950/50 backdrop-sm">
       <div className="mx-auto max-w-6xl px-6 py-24">
         <div className="mb-16 flex flex-col gap-3">
           <span className="text-xs font-medium uppercase tracking-widest text-emerald-400">The Commit History</span>
