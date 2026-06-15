@@ -935,16 +935,20 @@ const SupplyChainSlide = () => (
 // SLIDE 5: CEO FINANCIAL COMMAND CENTER (Streamlit)
 // ============================================================================
 
+const STREAMLIT_URL = process.env.NEXT_PUBLIC_STREAMLIT_URL || "https://ceo-dashboardgit-fwz2heby6wrjanjl77xdey.streamlit.app/?embed=true&embed_options=dark_theme"
+
 const CEODashboardSlide = () => (
   <div className="h-full w-full relative">
     <iframe
-      src="http://localhost:8501"
+      src={STREAMLIT_URL}
       className="w-full h-full border-0 rounded-lg"
       title="CEO Financial Command Center — Streamlit"
       style={{ minHeight: "580px" }}
+      allow="fullscreen"
+      loading="lazy"
     />
     <div className="absolute top-3 right-3 px-2 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded text-[10px] font-mono text-emerald-400">
-      STREAMLIT BACKEND
+      STREAMLIT CLOUD
     </div>
   </div>
 )

@@ -175,7 +175,7 @@ function FunnelWidget() {
                   <stop offset="100%" stopColor="#34d399" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <Tooltip {...chartTooltip} formatter={(v: number) => [`${v}%`, "CR"]} />
+              <Tooltip {...chartTooltip} formatter={(v) => [`${Number(v)}%`, "CR"]} />
               <Area type="monotone" dataKey="cr" stroke="#34d399" strokeWidth={2} fill="url(#funnelFill)" animationDuration={600} />
             </AreaChart>
           </ResponsiveContainer>
@@ -243,7 +243,7 @@ function MtaWidget() {
                   axisLine={false}
                   tickLine={false}
                 />
-                <Tooltip {...chartTooltip} formatter={(v: number) => [`${v}%`, "Credit"]} itemStyle={{ color: "#38bdf8" }} />
+                <Tooltip {...chartTooltip} formatter={(v) => [`${Number(v)}%`, "Credit"]} itemStyle={{ color: "#38bdf8" }} />
                 <Bar dataKey="weight" radius={0} animationDuration={500}>
                   {mtaData[mode].map((_, i) => (
                     <Cell key={i} fill="rgba(56,189,248,0.55)" />
