@@ -52,7 +52,7 @@ export default function RootLayout({
       <body className="font-sans antialiased bg-black text-zinc-50">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
-        <SpeedInsights />
+        {process.env.NODE_ENV === 'production' && <SpeedInsights />}
       </body>
     </html>
   )
