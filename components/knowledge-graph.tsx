@@ -15,7 +15,7 @@ interface Node {
 
 // Configuration - adjust these to customize the animation
 const CONFIG = {
-  nodeCount: 250, // Number of particles
+  nodeCount: 120, // Number of particles (reduced from 250 for performance)
   connectionDistance: 150, // Max distance for connections
   mouseInteractionDistance: 200, // Distance for mouse interaction
   mouseRepelForce: 0.7, // Force of mouse repulsion
@@ -189,7 +189,7 @@ export function KnowledgeGraph() {
       className="fixed inset-0 pointer-events-none"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1.5 }}
+      transition={{ duration: 0.3 }}
     />
   )
 }

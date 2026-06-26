@@ -22,7 +22,7 @@ export function TechStackBanner() {
           <span className="text-lg font-medium uppercase tracking-widest text-white-400">
             Microsoft Certified: Fabric Analytics Engineer Associate
           </span>
-          <img src="/microsoft-certified-associate-badge.svg" alt="Microsoft Certified Associate Badge" className="size-20" />
+          <img src="/microsoft-certified-associate-badge.svg" alt="Microsoft Certified Associate Badge" className="size-20" width={80} height={80} loading="lazy" />
         </div>
         <div className="flex flex-wrap items-center justify-center gap-6 md:gap-8">
           {techStack.map((tech, index) => (
@@ -39,6 +39,9 @@ export function TechStackBanner() {
                 src={tech.icon}
                 alt={tech.name}
                 className="size-10 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                width={40}
+                height={40}
+                loading="lazy"
               />
             </div>
           ))}

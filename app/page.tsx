@@ -3,12 +3,14 @@ import { TechStackBanner } from "@/components/tech-stack-banner"
 import { Hero } from "@/components/hero"
 import { Pillars } from "@/components/pillars"
 import { StackMatrix } from "@/components/stack-matrix"
-import { CaseStudies } from "@/components/case-studies"
-import { WorkloadSimulator } from "@/components/workload-simulator"
 import { Timeline } from "@/components/timeline"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
-import { KnowledgeGraph } from "@/components/knowledge-graph"
+import dynamic from "next/dynamic"
+
+const KnowledgeGraph = dynamic(() => import("@/components/knowledge-graph").then(mod => ({ default: mod.KnowledgeGraph })))
+const CaseStudies = dynamic(() => import("@/components/case-studies").then(mod => ({ default: mod.CaseStudies })))
+const WorkloadSimulator = dynamic(() => import("@/components/workload-simulator").then(mod => ({ default: mod.WorkloadSimulator })))
 
 export default function Page() {
   return (
