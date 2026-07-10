@@ -935,7 +935,7 @@ const SupplyChainSlide = () => (
 // SLIDE 5: CEO FINANCIAL COMMAND CENTER (Streamlit)
 // ============================================================================
 
-const STREAMLIT_URL = process.env.NEXT_PUBLIC_STREAMLIT_URL || "https://ceo-dashboardgit-fwz2heby6wrjanjl77xdey.streamlit.app/?embed=true&embed_options=dark_theme"
+const STREAMLIT_URL = process.env.NEXT_PUBLIC_STREAMLIT_URL || "http://127.0.0.1:8501/?embed=true&embed_options=dark_theme"
 
 const CEODashboardSlide = () => (
   <div className="h-full w-full relative">
@@ -948,7 +948,7 @@ const CEODashboardSlide = () => (
       loading="lazy"
     />
     <div className="absolute top-3 right-3 px-2 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded text-[10px] font-mono text-emerald-400">
-      STREAMLIT CLOUD
+      LOCAL DOCKER
     </div>
   </div>
 )
